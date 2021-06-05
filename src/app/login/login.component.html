@@ -1,0 +1,64 @@
+<title>{{title}}</title>
+
+  <div>
+    <div class="global-container">
+      <div class="card login-form" id="login" [ngStyle]="{'display': disType}">
+        <div class="card-body">
+          <h3 class="card-title text-center"><b>Log In</b></h3><br>
+          <div class="card-text">
+            <div class="form-group">
+              <input type="email" class="form-control" [(ngModel)]="emailL" [ngModelOptions]="{standalone: true}" id="email" placeholder="email@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" [(ngModel)]="passL" [ngModelOptions]="{standalone: true}"  id="pass" placeholder="Password" required>
+            </div>
+            <button (click)="signin()"   class="btn btn-primary btn-block">Sign In</button>
+            <div class="sign-up" (click)="changedisplay1()">
+              Don't have an account? <div class="text-primary" style="cursor: pointer;">Create One</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card login-form" id="signup" [ngStyle]="{'display': disType1}">
+        <div class="card-body">
+          <h3 class="card-title text-center"><b>Sign Up</b></h3>
+          <div class="card-text">
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="fname" [ngModelOptions]="{standalone: true}" placeholder="First Name" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="lname" [ngModelOptions]="{standalone: true}" placeholder="Last Name" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}" placeholder="9994440000" required minlength="10" maxlength="10">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" placeholder="name@gmail.com" required>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password" required>
+              </div>
+              <div class="form-group">
+                <input type="date" class="form-control" [(ngModel)]="dob" [ngModelOptions]="{standalone: true}" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="state" [ngModelOptions]="{standalone: true}" placeholder="State" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="city" [ngModelOptions]="{standalone: true}" placeholder="City" required>
+              </div>
+
+              <div class="form-group">
+                <input type="number" class="form-control" [(ngModel)]="pincode" [ngModelOptions]="{standalone: true}" placeholder="Pincode" required maxlength="6">
+              </div>
+              <button (click)="signup()"  class="btn btn-primary btn-block">Sign Up</button>
+              <div class="sign-up" (click)="changedisplay()">
+                Already have an account? <div class="text-primary" style="cursor: pointer;">Login</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
